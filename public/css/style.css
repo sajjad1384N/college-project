@@ -1,0 +1,110 @@
+body {
+    font-family: 'Onest', sans-serif m !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.container {
+    flex: 1;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.listing-card {
+    margin-bottom: 2rem !important;
+    border: none !important;
+}
+
+.f-info a {
+    font-size: 40px;
+}
+
+.navbar {
+    justify-content: center !important;
+    height: 120px !important;
+}
+
+.social-link p {
+    font-size: 20px;
+}
+
+.card-img-top {
+    border-radius: 2rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400px;
+}
+
+.main-box {
+    margin-left: 43px;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn {
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 40px !important;
+    border: none !important;
+    width: 100px;
+}
+
+.show-img {
+    height: 50vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    border-radius: 40px !important;
+    width: 90px;
+}
+
+.delete-btn {
+    border-radius: 40px !important;
+    border: none !important;
+}
+
+.login {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.signup {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#map {
+    height: 400px;
+    width: 120vh;
+}
