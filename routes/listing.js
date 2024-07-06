@@ -7,6 +7,28 @@ const listingController = require("../controllers/listings.js")
     //Multer is a node.js middleware for handling multipart/form-data, 
     //which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
     //NOTE: Multer will not process any form which is not multipart (multipart/form-data).
+// Show a specific listing
+router.get('/listings/:id', async (req, res) => {
+    try {
+        const listing = await Listing.findById(req.params.id).populate('owner').populate({
+            path: 'reviews',
+            populate: {
+                path: 'author'
+            }
+        });
+        if (!listing) {
+            req.flash('error', 'Cannot find that listing');
+            return res.redirect('/listings');
+        }
+        res.render('listings/show', { listing });
+    } catch (e) {
+        req.flash('error', 'Something went wrong');
+        res.redirect('/listings');
+    }
+});
+
+module.exports = router;
+
 const multer = require('multer')
 const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });

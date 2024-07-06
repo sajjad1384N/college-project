@@ -24,7 +24,9 @@ app.engine("ejs", ejsMate);
 const listingsRouter = require("./routes/listing.js")
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
-
+const profileRouter = require("./routes/profile.js");
+const googleRoute = require("./routes/google.js");
+const facebookRoute = require("./routes/facebooks.js");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
@@ -119,6 +121,10 @@ app.use("/listings", listingsRouter);
 //post route
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
+
+app.use("/profile", profileRouter);
+app.use("/auth/google", googleRoute);
+app.use("/auth/facebook", facebookRoute);
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, " page Not found"));
 });
