@@ -116,6 +116,9 @@ app.get("/demouser", async(req, res) => {
     //which is used in pbkdf2 hashing algorithm to store the password
     res.send(registerUser);
 })
+app.get("/",(req,res)=>{
+    res.redirect("/listings")
+})
 app.use("/listings", listingsRouter);
 // review routing
 //post route
