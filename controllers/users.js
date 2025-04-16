@@ -8,7 +8,7 @@ module.exports.signup = async (req, res) => {
 
         if (!fName) {
             req.flash("error", "First name is required");
-            return res.redirect("/signup");
+            return res.redirect("/signup");               
         }
 
         const newUser = new User({ email, username, fName });
