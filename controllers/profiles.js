@@ -18,9 +18,9 @@ module.exports.allListingDestroy = async (req, res, next) => {
 module.exports.profileDestroyListing = async (req, res, next) => {
 	let { id } = req.params;
 	let deleteListing = await Listing.findByIdAndDelete(id);
-	console.log(deleteListing);
+	//console.log(deleteListing);
 	req.flash("error", "Listing Deleted!");
-	console.log("delete");
+	//console.log("delete");
 	res.redirect("/profile");
 };
 
